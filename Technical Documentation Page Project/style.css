@@ -1,0 +1,138 @@
+body {
+	margin-left: 20px;
+	letter-spacing: 1px;
+}
+
+
+/* style div element with class "main-body"  
+
+- The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.
+
+- grid – generates a block-level grid
+
+*/
+
+div.main-body {
+	/*   
+  -The CSS Grid Layout Module offers a grid-based layout system, with rows and columns,
+  making it easier to design web pages without having to use floats and positioning. 
+
+  -grid – generates a block-level grid
+  
+ */
+	display: grid;
+	grid-template-columns: minmax(350px, auto) 1fr;
+	/*navbar for first column, mainContent for second*/
+	grid-template-areas: "navbar mainContent";
+	grid-gap: 5px;
+}
+
+nav#navbar {
+	grid-area: navbar;
+	position: fixed;
+}
+
+header {
+	margin-top: 20px;
+}
+
+span {
+	font-size: 30px;
+}
+
+#nav {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+#nav-header {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+nav#navbar a {
+	display: block;
+	border: .1px solid black;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	width: 200px;
+	margin-bottom: 5px;
+}
+
+main#main-doc {
+	grid-area: maincontent;
+}
+
+header {
+	font-size: 14px;
+	;
+	font-weight: bold;
+}
+
+p {
+	border-radius: 5px;
+}
+
+code {
+	background-color: #c2c2d6;
+	/* The display property specifies the display behavior (the type of rendering box) of an element. */
+	/* block	Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width*/
+	display: block;
+	/* The CSS padding properties are used to generate space around an element's content, inside of any defined borders. 
+  
+  - set padding around all sides of code elemnt. 
+  */
+	padding: 20px;
+}
+
+
+/*
+-The @media rule is used in media queries to apply different styles for different media types/devices.
+
+Media queries can be used to check many things, such as:
+
+width and height of the viewport
+width and height of the device
+orientation (is the tablet/phone in landscape or portrait mode?)
+resolution
+
+max-width	The maximum width of the display area, such as a browser window
+
+first column for the nav bar which is to be located on the left hand side
+
+Minmum value set min value 300px;
+*/
+
+@media screen and (max-width: 750px) {
+	div.main-body {
+		/* fr unit represents a fraction of the available space in the grid container. The next grid definition would create three equal width tracks that grow and shrink according to the available space. */
+		grid-template-columns: 1fr;
+		/*    
+ 
+- The grid-template-areas property specifies areas within the grid layout.
+
+- You can name grid items by using the grid-area property, and then reference to the name in the grid-template-areas property. 
+    
+    
+main#main-doc{
+  grid-area: mainContent;
+  
+}   
+*/
+		grid-template-areas: "navbar" "maincontent";
+	}
+	/*  
+  - inherit: Inherits this property from its parent element  
+  
+  - <div class="main-body"> is the parent element of nav#navBar */
+	nav#navBar {
+		position: inherit;
+	}
+	#main-doc {
+		margin-top: 360px;
+	}
+}

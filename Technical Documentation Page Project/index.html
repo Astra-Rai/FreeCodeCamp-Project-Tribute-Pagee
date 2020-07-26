@@ -1,0 +1,148 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<!-- 
+   Hello Camper!
+   
+   For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+   
+   - The freeCodeCamp Team 
+   
+   -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+<!-- div with the id="main-body" will be used for CSS Grid container -->
+<!--    -->
+<body>
+   <div class="main-body">
+      <nav id="navbar">
+         <header id="nav-header">Working From the Terminal</header>
+         <a href="#Introduction" class="nav-link">Introduction</a>
+         <a href="#pwd" class="nav-link">pwd</a>
+         <a href="#cd" class="nav-link">cd</a>
+         <a href="#mkdir" class="nav-link">mkdir</a>
+         <a href="#touch" class="nav-link">touch</a>
+         <a href="#ls" class="nav-link"> ls </a>
+      </nav>
+      <main id="main-doc">
+         <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>
+               A command-line interface processes commands to a computer program in the form of lines of text. The program which handles the interface is called a command-line interpreter or command-line processor.
+            </p>
+            <p>
+               Open the terminal. You should see the date and the date an dtime of user's last login.
+            </p>
+            <code> Opening of Terminal</code>
+            <code>
+            Last login: Tue Jul 21 15:39:59 on console <br>
+            astras-MacBook-Pro:~ astradaniels$   
+            </code>
+         </section>
+         <section class="main-section" id="pwd">
+            <header>pwd</header>
+            <p>
+              The pwd command is a command line utility for printing the current working directory. It will print the full system path of the current working directory to standard output.
+            </p>
+            <p> Use pwd to display the current working directory in the terminal</p>
+            <code>  pwd </code>
+            <code>
+            Last login: Tue Jul 21 15:39:59 on console<br>
+            astras-MacBook-Pro:~ astradaniels$ pwd<br>
+            /Users/astradaniels<br>
+            astras-MacBook-Pro:~ astradaniels$ 
+            </code>
+         </section>
+         <section class="main-section" id="cd">
+            <header>cd</header>
+            <p>
+               The cd command is used to change the current working directory to the desired directory. 
+            </p>
+            <p>
+              
+            </p>
+            <ul>
+               <li>Current Objective: Create folder in the desktop directory.</li>
+               <li>Note: The current working directory is astradaniels, this can be observed by viewing the current file path <strong>/Users/astradaniels</strong>
+                 <li>The new folder that we'll create should be in the desktop directory</li>
+               <li>Change the directory to desktop by using the cd command.</li>
+               <li>Type the following in the terminal: cd desktop.</li>
+              <li>Note file path change to <strong>/Users/astradaniels/desktop</strong> from <strong> /Users/astradaniels</strong>
+              </li>
+            </ul>
+            <code>  cd desktop </code>
+            <code>
+            Last login: Tue Jul 21 15:39:59 on console<br>
+            astras-MacBook-Pro:~ astradaniels$ pwd<br>
+            /Users/astradaniels<br>
+            astras-MacBook-Pro:~ astradaniels$ cd desktop<br>
+            astras-MacBook-Pro:desktop astradaniels$ pwd<br>
+            /Users/astradaniels/desktop<br>
+            astras-MacBook-Pro:desktop astradaniels$ 
+            </code>
+         </section>
+         <section class="main-section" id="mkdir">
+            <header>mkdir</header>
+            <p>
+               Use the mkdir command to create a new folder, name the folder <strong> new-folder </strong> Make a new folder/directory by using the mkdir command
+            </p>
+            <p> Change the directory from desktop to new-folder using the cd command</p>
+           <p> Current working directory is now new-folder </p>
+         </section>
+         <code> mkdir new-folder</code>
+         <code>
+         Last login: Tue Jul 21 15:39:59 on console<br>
+         astras-MacBook-Pro:~ astradaniels$ pwd<br>
+         /Users/astradaniels<br>
+         astras-MacBook-Pro:~ astradaniels$ cd desktop<br>
+         astras-MacBook-Pro:desktop astradaniels$ pwd<br>
+         /Users/astradaniels/desktop<br>
+         astras-MacBook-Pro:desktop astradaniels$ mkdir new-folder<br>
+         astras-MacBook-Pro:desktop astradaniels$ cd new-folder
+         </code>
+         <section class="main-section" id="touch">
+            <header>touch</header>
+            <p>
+               Use touch command to add the following new files to the new-folder: <ol><li>index.html</li><li>style.css</li> <li>script.js</li></ol>
+            </p>
+
+            <code>  touch index.html sytle.css script.js </code>
+            <code>
+            Last login: Tue Jul 21 15:39:59 on console<br>
+            astras-MacBook-Pro:~ astradaniels$ pwd<br>
+            /Users/astradaniels<br>
+            astras-MacBook-Pro:~ astradaniels$ cd desktop<br>
+            astras-MacBook-Pro:desktop astradaniels$ pwd<br>
+            /Users/astradaniels/desktop<br>
+            astras-MacBook-Pro:desktop astradaniels$ mkdir new-folder<br>
+            astras-MacBook-Pro:desktop astradaniels$ cd new-folder<br>
+            astras-MacBook-Pro:new-folder astradaniels$ touch index.html style.css script.js
+            </code>
+            <section class="main-section" id="ls">
+               <header>ls</header>
+               <p>
+                  The ls command will list all files and folders in the new-folder 
+               </p>
+               <p>
+                  The reason why it is difficult to understand is to draw attention away from the words on a page and to focus it on the design instead.
+               </p>
+               <code>  ls 
+               </code>
+              <code>
+                astras-MacBook-Pro:~ astradaniels$ pwd<br>
+/Users/astradaniels<br>
+astras-MacBook-Pro:~ astradaniels$ cd desktop <br>
+astras-MacBook-Pro:desktop astradaniels$ pwd <br>
+/Users/astradaniels/desktop <br>
+astras-MacBook-Pro:desktop astradaniels$ mkdir new-folder <br>
+astras-MacBook-Pro:desktop astradaniels$ cd new folder <br>
+-bash: cd: new: No such file or directory <br>
+astras-MacBook-Pro:desktop astradaniels$ cd new-folder <br>
+astras-MacBook-Pro:new-folder astradaniels$ touch index.html style.css script.js <br>
+astras-MacBook-Pro:new-folder astradaniels$ ls <br>
+index.html	script.js	style.css <br>
+astras-MacBook-Pro:new-folder astradaniels$
+                </code>
+            </section>
+         </section>
+      </main>
+   </div>
+</body>
